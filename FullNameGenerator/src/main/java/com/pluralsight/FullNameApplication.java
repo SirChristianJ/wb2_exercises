@@ -14,20 +14,20 @@ public class FullNameApplication {
 
     public static String promptUser(String prompt){
         System.out.print(prompt);
-        return scanner.nextLine();
+        return scanner.nextLine().trim();
     }
 
     public static String displayName(String fName, String mName, String lName, String suffixName){
         String fullName;
-        if(mName!=null && suffixName!=null){
+        if(!mName.isEmpty() && !suffixName.isEmpty()){
                 fullName = fName + " " + mName + " " + lName + ", " + suffixName;
 
-        } else if (suffixName!=null) {
+        } else if (!suffixName.isEmpty()) {
                 fullName = fName  + " " + lName + ", " + suffixName;
 
-        } else  fullName = fName + " " + mName + " " + lName;
+        } else fullName = fName + " " + mName + " " + lName;
 
-        return fullName.trim();
+        return fullName;
     }
 
 }

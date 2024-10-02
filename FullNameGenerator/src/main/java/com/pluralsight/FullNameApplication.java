@@ -18,14 +18,7 @@ public class FullNameApplication {
     }
 
     public static String displayName(String fName, String mName, String lName, String suffixName){
-        String fullName;
-        if(!mName.isEmpty() && !suffixName.isEmpty()){
-                fullName = fName + " " + mName + " " + lName + ", " + suffixName;
-
-        } else if (!suffixName.isEmpty()) {
-                fullName = fName  + " " + lName + ", " + suffixName;
-
-        } else fullName = fName + " " + mName + " " + lName;
+        String fullName = fName + ((mName.isEmpty()) ? "": " " + mName)+ " " + lName + ((suffixName.isEmpty()) ? "":", " + suffixName);
 
         return fullName;
     }

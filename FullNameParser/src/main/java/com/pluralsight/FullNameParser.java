@@ -30,9 +30,9 @@ public class FullNameParser {
             lastName = nameSplit[1];
         }
 
-        System.out.println("First Name: " + firstName);
-        System.out.println("Middle Name: " + middleName);
-        System.out.println("Last Name: " + lastName);
+        System.out.println("First Name: " + firstName.trim());
+        System.out.println("Middle Name: " + middleName.trim());
+        System.out.println("Last Name: " + lastName.trim());
 
     }
 }

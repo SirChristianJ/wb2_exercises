@@ -1,11 +1,11 @@
 package com.pluralsight;
 
-public class DoWhileLoop {
-    public static void main(String[] args){
+public class WhileLoop {
+    public static void main(String[] args) {
         int i = 0;
-        do{
+        while (i < 5){
             System.out.println("I love Java");
             i++;
-        } while (i<5);
+        }
     }
 }

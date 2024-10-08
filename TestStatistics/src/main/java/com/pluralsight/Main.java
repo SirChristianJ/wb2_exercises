@@ -32,10 +32,8 @@ public class Main {
     public static void highTestScore(double[] scores){
         double ans = 0.0;
 
-        for (int i = 1; i < scores.length; i++){
-            if(scores[i]<scores[i-1]){
-                ans = scores[i-1];
-            }else{
+        for (int i = 0; i < scores.length; i++){
+            if(ans < scores[i]){
                 ans = scores[i];
             }
         }
@@ -43,13 +41,11 @@ public class Main {
     }
 
     public static void lowTestScore(double[] scores){
-        double ans = 0.0;
+        double ans = scores[0];
 
         for (int i = 1; i < scores.length; i++){
-            if(scores[i]<scores[i-1]){
+            if(ans > scores[i]){
                 ans = scores[i];
-            }else{
-                ans = scores[i-1];
             }
         }
         System.out.printf("%s %.2f","\nLowest Test Score:", ans);
